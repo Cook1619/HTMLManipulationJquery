@@ -43,9 +43,8 @@ let friends = ['Cody', 'Tom', 'Erik', 'Aaron', 'Mike', 'Mike', 'Ahmed', 'Adam', 
 let $friend = $('#addFriend');
 
 $($friend).click(function(){
-    $('ul').append('<li></li>')
+    let $ul = $("ul");
     for(let i = 0; i < friends.length; i++){
-        let $liText = $('<li>'+ friends[i] +'</li>')
+        $($ul).append('<li>'+friends[i]+'</li>');
     }
-    $('li').append($liText);
 })
